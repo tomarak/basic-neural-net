@@ -3,6 +3,7 @@ This is a simple neural network that makes predictions on 2d arrays of data.
 
 # Example Usage
 ```python
+import numpy
 from neural import NeuralNetwork
 
 
