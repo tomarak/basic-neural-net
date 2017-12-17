@@ -14,10 +14,10 @@ input_data = input_data/numpy.amax(input_data, axis=0)
 output_data = output_data/100
 
 net = NeuralNetwork(2, 3, 1)
-NN.train_network()
-NN.saveWeights()
+net.train_network()
+met.saveWeights()
 predicted_values = numpy.array(([4,8]), dtype=float)
-NN.predict(predicted_values)
+net.predict(predicted_values)
 ```
 ```
 Predicted data based on trained weights:
