@@ -10,8 +10,8 @@ from neural import NeuralNetwork
 input_data = numpy.array(([2, 9], [1, 5], [3, 6]), dtype=float)
 output_data = numpy.array(([92], [86], [89]), dtype=float)
 
-input_data = input_data/numpy.amax(input_data, axis=0)
-output_data = output_data/100
+input_data = input_data / numpy.amax(input_data, axis=0)
+output_data = output_data / 100
 
 net = NeuralNetwork(2, 3, 1)
 net.train_network()
