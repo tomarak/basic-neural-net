@@ -22,7 +22,7 @@ class NeuralNetwork(object):
         Forward feed data into network.
 
         First, we get the dot product of the inputdata and the first matrix of weights. Then, we apply the sigmoid
-        activation function to the dotproduct. We repeat this process witht he second set of weights.
+        activation function to the dotproduct. We repeat this process with the second set of weights.
         """
         # Dotproduct of the input and the first set of weights
         self.z = numpy.dot(input_data, self.weight_matrix_a)
@@ -31,14 +31,13 @@ class NeuralNetwork(object):
         self.z3 = numpy.dot(self.z2, self.weight_matrix_b)
         return self.sigmoid(self.z3)
 
-    def sigmoid(self, s):
+    def sigmoid(self, layer_value):
         """Return the sigmoid of an input value."""
-        # activation function
-        return 1/(1+numpy.exp(-s))
+        return 1/(1+numpy.exp(-layer_value))
 
-    def sigmoidPrime(self, s):
+    def sigmoidPrime(self, layer_value):
         """Return the derivative sigmoid value."""
-        return s * (1 - s)
+        return s * (1 - layer_value)
 
     def backpropagate(self, input_data, output_data, output):
         # backpropagate propgate through the network
