@@ -15,9 +15,9 @@ output_data = output_data/100
 
 net = NeuralNetwork(2, 3, 1)
 net.train_network()
-met.saveWeights()
-predicted_values = numpy.array(([4,8]), dtype=float)
-net.predict(predicted_values)
+net.saveWeights()
+input_x_to_predict = numpy.array(([4,8]), dtype=float)
+net.predict(input_x_to_predict)
 ```
 ```
 Predicted data based on trained weights:
